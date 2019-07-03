@@ -1,8 +1,9 @@
-FROM frolvlad/alpine-python2
+FROM frolvlad/alpine-glibc
 
 RUN apk add --no-cache \
     bash \
     git \
+    python \
     py-icu
 
 # Override PIP's glibc detection, see https://github.com/pypa/pip/issues/3969#issuecomment-247381915.
